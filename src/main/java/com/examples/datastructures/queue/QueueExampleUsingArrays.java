@@ -1,6 +1,6 @@
 package com.examples.datastructures.queue;
 
-public class QueueExampleUsingArrays<T> {
+public class QueueExampleUsingArrays<T> implements Queue<T> {
     private T[] data;
     private int front;
     private int end;
@@ -16,7 +16,6 @@ public class QueueExampleUsingArrays<T> {
     }
 
     public int size() {
-
         if ( front == -1 && end == -1) {
             return 0;
         }
