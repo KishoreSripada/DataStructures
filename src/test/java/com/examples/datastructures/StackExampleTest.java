@@ -9,7 +9,7 @@ import org.mockito.Mock;
 public class StackExampleTest {
 
     @Mock
-    private StackExample stack = new StackExample(100);
+    private StackExample<String> stack = new StackExample<String>(100);
 
     @Before
     public void setup() {
@@ -58,5 +58,13 @@ public class StackExampleTest {
         stack.pop();
         stack.pop();
         Assert.assertEquals(12, stack.size());
+    }
+
+    @Test
+    public void pop_first_card_should_be_last_card_inserted() {
+        Assert.assertEquals(14, stack.size());
+        // Pop should remove the last pushed item, which is 1
+        Assert.assertEquals("1", stack.pop());
+        Assert.assertEquals(13, stack.size());
     }
 }

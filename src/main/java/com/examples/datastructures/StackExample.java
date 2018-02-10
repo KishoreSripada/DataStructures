@@ -5,11 +5,6 @@ public class StackExample<T> {
     private T[] stackData;
     private int stackPointer;
 
-    public StackExample() {
-        stackData = (T[]) new Object[1000];
-        stackPointer = 0;
-    }
-
     public StackExample(int testDataSize) {
         stackData = (T[]) new Object[testDataSize];
         stackPointer = 0;
@@ -38,7 +33,6 @@ public class StackExample<T> {
     }
 
     public T access(T item) {
-        T returnItem = null;
         while ( stackPointer > 0 ) {
             T tmpItem = pop();
             if(item.equals(tmpItem)) {
@@ -46,10 +40,6 @@ public class StackExample<T> {
             }
         }
         throw new IllegalArgumentException("Could not find item on stack manager");
-    }
-
-    public static void main(String[] args) {
-
     }
 
     public int size() {
