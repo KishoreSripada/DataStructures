@@ -1,6 +1,7 @@
-package com.examples.datastructures;
+package com.examples.datastructures.stack;
 
 
+import com.examples.datastructures.stack.StackExampleUsingArrays;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

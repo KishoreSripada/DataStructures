@@ -1,4 +1,4 @@
-package com.examples.datastructures;
+package com.examples.datastructures.stack;
 
 public interface Stack<T> {
 
