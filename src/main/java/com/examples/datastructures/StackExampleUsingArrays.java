@@ -1,11 +1,11 @@
 package com.examples.datastructures;
 
-public class StackExample<T> {
+public class StackExampleUsingArrays<T> implements Stack<T> {
 
     private T[] stackData;
     private int stackPointer;
 
-    public StackExample(int testDataSize) {
+    public StackExampleUsingArrays(int testDataSize) {
         stackData = (T[]) new Object[testDataSize];
         stackPointer = 0;
     }

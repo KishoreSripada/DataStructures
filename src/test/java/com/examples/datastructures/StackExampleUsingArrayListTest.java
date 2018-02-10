@@ -1,15 +1,16 @@
 package com.examples.datastructures;
 
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 
-public class StackExampleTest {
+import static org.junit.Assert.*;
+
+public class StackExampleUsingArrayListTest {
 
     @Mock
-    private StackExample<String> stack = new StackExample<String>(100);
+    private StackExampleUsingArrayList<String> stack = new StackExampleUsingArrayList<String>();
 
     @Before
     public void setup() {
@@ -67,4 +68,5 @@ public class StackExampleTest {
         Assert.assertEquals("1", stack.pop());
         Assert.assertEquals(13, stack.size());
     }
+
 }
