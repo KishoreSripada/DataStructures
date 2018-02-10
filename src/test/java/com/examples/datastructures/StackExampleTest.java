@@ -9,7 +9,7 @@ import org.mockito.Mock;
 public class StackExampleTest {
 
     @Mock
-    private StackExample stack = new StackExample(3);
+    private StackExample stack = new StackExample(100);
 
     @Before
     public void setup() {
@@ -17,20 +17,46 @@ public class StackExampleTest {
     }
 
     private void initializeStack() {
-        stack.push("1");
-        stack.push("2");
+        stack.push("Ace");
+        stack.push("King");
+        stack.push("Queen");
+        stack.push("Jackie");
+        stack.push("10");
+        stack.push("9");
+        stack.push("8");
+        stack.push("7");
+        stack.push("6");
+        stack.push("5");
+        stack.push("4");
         stack.push("3");
+        stack.push("2");
+        stack.push("1");
     }
 
     @Test
     public void push_items_to_stack_returns_correct_size() {
-        Assert.assertEquals(3, stack.size());
+        Assert.assertEquals(14, stack.size());
     }
 
     @Test
-    public void pop_returns_items_in_last_in_first_out_order() {
-        Assert.assertEquals("3", stack.pop());
-        Assert.assertEquals("2", stack.pop());
-        Assert.assertEquals("1", stack.pop());
+    public void check_if_items_are_present_in_stack() {
+        Assert.assertEquals(true, stack.contains("3"));
+        Assert.assertEquals(true, stack.contains("Jackie"));
+        Assert.assertEquals(true, stack.contains("Ace"));
+        Assert.assertEquals(false, stack.contains("Joker"));
+    }
+
+    @Test
+    public void access_a_specific_card() {
+        Assert.assertEquals("3", stack.access("3"));
+        Assert.assertEquals(11, stack.size());
+    }
+
+    @Test
+    public void pop_few_cards_should_return_correct_size() {
+        Assert.assertEquals(14, stack.size());
+        stack.pop();
+        stack.pop();
+        Assert.assertEquals(12, stack.size());
     }
 }

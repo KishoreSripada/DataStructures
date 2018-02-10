@@ -53,6 +53,6 @@ public class StackExample<T> {
     }
 
     public int size() {
-        return stackData.length;
+        return stackPointer;
     }
 }
