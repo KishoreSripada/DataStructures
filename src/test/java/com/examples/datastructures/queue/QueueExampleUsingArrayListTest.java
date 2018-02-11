@@ -5,10 +5,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 
-public class QueueExampleUsingArraysTest {
+public class QueueExampleUsingArrayListTest {
 
     @Mock
-    private Queue<String> queue = new QueueExampleUsingArrays<String>(100);
+    private Queue<String> queue = new QueueExampleUsingArrayList<String>();
 
     @Before
     public void setup() {
